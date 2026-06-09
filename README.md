@@ -1,127 +1,56 @@
-# 🚀 JS Learning — JavaScript Basics Reference
+# 📘 JavaScript Basics — Complete Reference Repo
 
-A structured, topic-by-topic JavaScript learning repository built from scratch to strengthen core JavaScript fundamentals.
-
-This repository covers essential JavaScript concepts with **clear explanations, working examples, and hands-on code**. Each topic is organized into its own folder with self-contained `.js` files for focused learning.
-
----
-
-## 📚 Topics Covered
-
-| #  | Topic                  |
-| -- | ---------------------- |
-| 01 | Variables & Datatypes  |
-| 02 | Operators              |
-| 03 | Control Flow           |
-| 04 | Functions              |
-| 05 | Arrays                 |
-| 06 | Objects                |
-| 07 | Loops                  |
-| 08 | Strings                |
-| 09 | Type Conversion        |
-| 10 | Scope & Hoisting       |
-| 11 | Closures               |
-| 12 | Higher Order Functions |
-| 13 | DOM Basics             |
+A structured, topic-by-topic JavaScript reference built from scratch.
+Each folder contains a focused `.js` file with clear explanations and working examples.
 
 ---
 
-## 📂 Project Structure
+## 📂 Folder Structure
 
-```bash
-JS-learning/
-│── 01-variables-and-datatypes/
-│   └── variables.js
-│── 02-operators/
-│   └── operators.js
-│── 03-control-flow/
-│   └── control-flow.js
-│── 04-functions/
-│   └── functions.js
-│── ...
-│── 13-dom-basics/
-│   └── dom.js
-│── README.md
-```
-
-Each folder focuses on **one core JavaScript concept** and contains runnable examples with explanations.
+| # | Topic | File |
+|---|-------|------|
+| 01 | Variables & Datatypes | `01-variables-and-datatypes/variables.js` |
+| 02 | Operators | `02-operators/operators.js` |
+| 03 | Control Flow | `03-control-flow/control-flow.js` |
+| 04 | Functions | `04-functions/functions.js` |
+| 05 | Arrays | `05-arrays/arrays.js` |
+| 06 | Objects | `06-objects/objects.js` |
+| 07 | Loops | `07-loops/loops.js` |
+| 08 | Strings | `08-strings/strings.js` |
+| 09 | Type Conversion | `09-type-conversion/type-conversion.js` |
+| 10 | Scope & Hoisting | `10-scope-and-hoisting/scope-hoisting.js` |
+| 11 | Closures | `11-closures/closures.js` |
+| 12 | Higher Order Functions | `12-higher-order-functions/hof.js` |
+| 13 | DOM Basics | `13-dom-basics/dom.js` |
+| 14 | Events | `14-events/events.js` |
+| 15 | Async / Promises | `15-async-promises/async-promises.js` |
+| 16 | ES6+ Features | `16-es6-features/es6.js` |
+| 17 | Error Handling | `17-error-handling/error-handling.js` |
+| 18 | Modules | `18-modules/modules.js` |
+| 19 | OOP & Classes | `19-oop-classes/oop.js` |
+| 20 | JSON | `20-json/json.js` |
 
 ---
 
-## 🚀 Getting Started
-
-### 1️⃣ Clone the Repository
+## 🚀 How to Use
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/JS-learning.git
-```
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/js-basics.git
+cd js-basics
 
-### 2️⃣ Navigate to the Project
-
-```bash
-cd JS-learning
-```
-
-### 3️⃣ Run Any JavaScript File
-
-Make sure Node.js is installed on your system.
-
-```bash
+# Run any file with Node.js
 node 01-variables-and-datatypes/variables.js
 ```
 
-You can run any topic file similarly.
+> No dependencies. Pure vanilla JavaScript. Node.js required for running locally.
 
 ---
 
-## 🎯 Purpose of This Repository
+## 🎯 Goal
 
-This repository is designed to:
-
-* Build strong JavaScript fundamentals
-* Learn concepts topic by topic
-* Practice with runnable examples
-* Understand the **"why" behind the code**, not just syntax
-* Create a quick revision reference for interviews and projects
+This repo serves as a personal, hands-on JavaScript reference — one topic at a time, built with real examples and comments that explain the *why*, not just the *what*.
 
 ---
 
-## 🛠 Tech Stack
-
-* **JavaScript (Vanilla JS)**
-* **Node.js** (for running files locally)
-
-No frameworks. No dependencies. Just pure JavaScript.
-
----
-
-## 💡 Learning Approach
-
-Every topic is:
-
-✅ Beginner-friendly
-✅ Self-contained
-✅ Well-commented
-✅ Practical and runnable
-
-The goal is to make JavaScript learning **simple, structured, and practical**.
-
----
-
-## 🤝 Contributions
-
-This is a personal learning repository, but suggestions and improvements are always welcome.
-
-Feel free to fork the repo and experiment.
-
----
-
-## ⭐ Support
-
-If you found this repository helpful, consider giving it a **star ⭐** on GitHub.
-
----
-
-### Happy Coding 💻
-
-**Learn JavaScript one concept at a time.**
+*Built topic by topic. Each file is self-contained and runnable.*
