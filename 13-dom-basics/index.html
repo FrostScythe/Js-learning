@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Basics</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            background: #1e293b;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        code {
+            background: #334155;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .highlight {
+            color: #facc15;
+        }
+
+        #live-output {
+            margin-top: 10px;
+            background: #0f172a;
+            padding: 10px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="page-title">DOM Basics Demo</h1>
+
+<!-- Selector Demo -->
+<section id="selector-demo">
+    <h2>Selector Demo</h2>
+
+    <p class="api-note">
+        First API note
+    </p>
+
+    <p class="api-note highlight">
+        Highlighted API note
+    </p>
+
+    <p class="api-note">
+        Third API note
+    </p>
+
+    <input type="text" placeholder="Text input" />
+</section>
+
+<!-- textContent Demo -->
+<section>
+    <h2>textContent Demo</h2>
+
+    <div id="textcontent-demo">
+        Visible text
+        <span style="display:none;">Hidden text</span>
+        <strong>Bold text</strong>
+    </div>
+</section>
+
+<!-- innerText Demo -->
+<section>
+    <h2>innerText Demo</h2>
+
+    <div id="innertext-demo">
+        Visible text
+        <span style="display:none;">Hidden text</span>
+        <strong>Bold text</strong>
+    </div>
+</section>
+
+<!-- innerHTML Demo -->
+<section>
+    <h2>innerHTML Demo</h2>
+
+    <div id="innerhtml-demo">
+        <strong>Bold</strong>
+        and
+        <em>italic</em>
+        and
+        <span style="color:#818cf8">colored</span>
+    </div>
+</section>
+
+<!-- Compare Box -->
+<section>
+    <h2>Comparison Demo</h2>
+
+    <div id="compare-box">
+        Hello <strong>World</strong>
+        <span style="display:none">Secret</span>
+    </div>
+
+    <br>
+
+    <button id="btn-textcontent">
+        textContent
+    </button>
+
+    <button id="btn-innertext">
+        innerText
+    </button>
+
+    <button id="btn-innerhtml">
+        innerHTML
+    </button>
+
+    <p>
+        Selected:
+        <strong id="live-label">None</strong>
+    </p>
+
+    <div id="live-output">
+        Click a button
+    </div>
+</section>
+
+<script src="./dom.js"></script>
+</body>
+</html>
