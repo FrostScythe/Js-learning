@@ -1,3 +1,6 @@
+// ─── DOM Basics ───────────────────────────────────────────────────────────────
+
+
 // ─── What is an API? ──────────────────────────────────────────────────────────
 
 // API = Application Programming Interface
@@ -242,3 +245,150 @@ document.getElementById("btn-innerhtml")?.addEventListener("click", () => {
     out.textContent = compareBox.innerHTML;
     document.getElementById("live-label").textContent = "innerHTML";
 });
+
+
+// ════════════════════════════════════════════════════════════════
+// PART 3 — CREATING & REMOVING ELEMENTS
+// ════════════════════════════════════════════════════════════════
+
+
+// ─── appendChild ──────────────────────────────────────────────────────────────
+
+// Adds a node as the LAST child of a parent element.
+// If the node already exists in the DOM, it gets MOVED (not copied).
+
+const list = document.getElementById("demo-list");
+
+// create a new <li> and append it
+const newItem = document.createElement("li");
+newItem.textContent = "Item added via appendChild";
+list.appendChild(newItem);
+
+// create and append multiple items
+["Spring Boot", "React", "PostgreSQL"].forEach(tech => {
+    const li = document.createElement("li");
+    li.textContent = tech;
+    list.appendChild(li);
+});
+
+console.log("list children after appendChild:", list.children.length);
+
+
+// ─── removeChild ──────────────────────────────────────────────────────────────
+
+// Removes a specific child node from its parent.
+// Returns the removed node — you can re-insert it elsewhere.
+
+const firstItem = list.querySelector("li");
+const removed = list.removeChild(firstItem);
+console.log("removed:", removed.textContent);
+
+// modern alternative — element.remove() (no need to reference parent)
+// list.lastElementChild.remove();
+
+
+// ─── setAttribute ─────────────────────────────────────────────────────────────
+
+// setAttribute(name, value) — sets or updates any attribute on an element.
+// Works for standard attributes (href, src, id, class) and custom ones too.
+
+const link = document.getElementById("demo-link");
+
+link.setAttribute("href", "https://developer.mozilla.org");
+link.setAttribute("target", "_blank");
+link.setAttribute("data-source", "mdn");
+
+console.log("href:", link.getAttribute("href"));
+console.log("data-source:", link.getAttribute("data-source"));
+console.log("has target?", link.hasAttribute("target"));   // true
+
+link.removeAttribute("target");
+console.log("has target after remove?", link.hasAttribute("target")); // false
+
+// for class and id, direct property access is cleaner than setAttribute
+// link.setAttribute("class", "active")  → link.className = "active"
+// link.setAttribute("id", "new-id")     → link.id = "new-id"
+
+
+// ════════════════════════════════════════════════════════════════
+// PART 4 — BROWSER INTERFACES
+// ════════════════════════════════════════════════════════════════
+
+
+// ─── navigator interface ──────────────────────────────────────────────────────
+
+// window.navigator — info about the browser and user's environment
+// Commonly used for: device detection, geolocation, online status, clipboard
+
+console.log("--- navigator ---");
+console.log("browser name+version:", navigator.userAgent);
+console.log("platform:", navigator.platform);
+console.log("language:", navigator.language);           // "en-US"
+console.log("online:", navigator.onLine);               // true/false
+console.log("cookiesEnabled:", navigator.cookieEnabled);
+console.log("cpu cores:", navigator.hardwareConcurrency);
+
+// geolocation — ask user permission, then get lat/lng
+// navigator.geolocation.getCurrentPosition(
+//     pos => console.log(pos.coords.latitude, pos.coords.longitude),
+//     err => console.log("denied:", err.message)
+// );
+
+// clipboard — read/write clipboard (requires user gesture + permission)
+// navigator.clipboard.writeText("copied!")
+//     .then(() => console.log("copied to clipboard"));
+
+
+// ─── window interface ─────────────────────────────────────────────────────────
+
+// window is the global object in the browser.
+// All global variables and functions are properties of window.
+// You rarely need to write "window." — it's implicit.
+
+console.log("--- window ---");
+console.log("viewport width:", window.innerWidth);
+console.log("viewport height:", window.innerHeight);
+console.log("full screen width:", window.screen.width);
+console.log("full screen height:", window.screen.height);
+console.log("scroll position Y:", window.scrollY);
+console.log("scroll position X:", window.scrollX);
+console.log("origin:", window.location.origin);
+console.log("pathname:", window.location.pathname);
+console.log("protocol:", window.location.protocol);
+
+// window.history — go back/forward in browser history
+// window.history.back();
+// window.history.forward();
+// window.history.pushState({}, "", "/new-path");  // change URL without reload
+
+// window timing functions (these are window methods, no "window." needed)
+// setTimeout(fn, ms)   — run once after delay
+// setInterval(fn, ms)  — run repeatedly
+// clearTimeout(id)
+// clearInterval(id)
+
+
+// ─── document interface ───────────────────────────────────────────────────────
+
+// document is the entry point to the DOM tree.
+// It represents the entire HTML page.
+
+console.log("--- document ---");
+console.log("title:", document.title);
+console.log("URL:", document.URL);
+console.log("domain:", document.domain);
+console.log("ready state:", document.readyState);   // "loading" | "interactive" | "complete"
+console.log("charset:", document.characterSet);
+console.log("html element:", document.documentElement);  // <html>
+console.log("head:", document.head);
+console.log("body:", document.body);
+
+// useful document methods
+console.log("active element:", document.activeElement);  // focused element
+console.log("all forms:", document.forms.length);
+console.log("all images:", document.images.length);
+console.log("all links:", document.links.length);
+
+// document.cookie — read/write cookies (string-based, a bit clunky)
+// document.cookie = "theme=dark; path=/";
+// console.log(document.cookie);
