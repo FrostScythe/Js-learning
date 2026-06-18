@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <title>Angular project</title>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.main.js"></script>
+    <script src="app\app.js"></script>
+</head>
+<body ng-controller="NinjaController">
+    <div >
+        <input type="text" ng-model="favMeal" placeholder ="Enter your fav meal"/>
+        <p>Your favorite meals are:</p>
+        <ul>
+            <li ng-repeat="meal in favMeal">{{meal}}</li>
+        </ul> 
+    </div>
+
+    <div >
+        <p class="{{color}}">Numbers: {{numbers}}</p>
+        <p>{{numbers[0] + numbers[1]}}</p>
+    </div>
+</body>
+</html>
