@@ -1,0 +1,53 @@
+<div class="content">
+        <h1>The Menu</h1>
+        <p>
+            Everything we’re serving today. Search for a craving, sort by price or name,
+            or filter by rating — all powered by AngularJS bindings.
+        </p>
+        <div class="menu-body">
+
+            <input type="text" ng-model="search" placeholder="Enter your fav meal" />
+
+            <button class="sort-btn" ng-click="order='price'">
+                Sort by Price
+            </button>
+
+            <button class="sort-btn" ng-click="order='name'">
+                Sort by Name
+            </button>
+            <select class="sort-btn" ng-model="rating" ng-options="r as (r + ' ⭐') for r in ratings">
+                <option value="">Rating</option>
+            </select>
+
+            <p class="eyebrow">Today’s board</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Food</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="meal in favMeal | orderBy:order | filter:search"
+                        ng-show="meal.available && (!rating || meal.rating === rating)">
+
+                        <td><img ng-src="{{meal.thumb}}" alt="{{meal.name}}" 
+                            style="margin:12px 10px 0 0; width:50px; height:50px;" ng-show="meal.thumb"></td>
+                        <td>{{meal.name}}</td>
+                        <td>{{meal.price | currency:'₹'}}</td>
+                        <td>{{getStars(meal.rating)}}</td>
+                        <td>
+                            <span class="remove" ng-click="remove(meal)">❌</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+             <div class="content" ng-include="'form.html'"></div>
+        </div>
+
+    </div>

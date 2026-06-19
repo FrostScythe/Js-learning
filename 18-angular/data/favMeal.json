@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Pizza",
+        "rating": 5,
+        "price": 160,
+        "available": true,
+        "thumb": "content/img/pizza.png"
+    },
+    {
+        "name": "Burger",
+        "rating": 4,
+        "price": 80,
+        "available": true,
+        "thumb": "content/img/burger.png"
+    },
+    {
+        "name": "Pasta",
+        "rating": 3,
+        "price": 120,
+        "available": false,
+        "thumb": "content/img/pasta.png"
+    },
+    {
+        "name": "Salad",
+        "rating": 2,
+        "price": 60,
+        "available": true,
+        "thumb": "content/img/salad.png"
+    },
+    {
+        "name": "Sushi",
+        "rating": 5,
+        "price": 200,
+        "available": false,
+        "thumb": "content/img/sushi.png"
+    },
+    {
+        "name": "Ice Cream",
+        "rating": 4,
+        "price": 50,
+        "available": true,
+        "thumb": "content/img/ice-cream.png"
+    }
+]

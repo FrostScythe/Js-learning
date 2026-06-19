@@ -1,0 +1,9 @@
+<h2 class="form-title">Add a dish</h2>
+<p class="form-hint">Put something new on the board — it appears in the menu instantly.</p>
+
+<form ng-submit="addMeal()">
+    <input type="text" placeholder="Enter name" ng-model="newMeal.name" />
+    <input type="number" placeholder="Enter price" ng-model="newMeal.price" />
+    <input type="number" placeholder="Enter rating" ng-model="newMeal.rating" />
+    <input type="submit" value="Add Meal" />
+</form>

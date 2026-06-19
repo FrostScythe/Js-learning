@@ -7,28 +7,26 @@ Each folder contains a focused `.js` file with clear explanations and working ex
 
 ## 📂 Folder Structure
 
-| # | Topic | File |
-|---|-------|------|
-| 01 | Variables & Datatypes | `01-variables-and-datatypes/variables.js` |
-| 02 | Operators | `02-operators/operators.js` |
-| 03 | Control Flow | `03-control-flow/control-flow.js` |
-| 04 | Functions | `04-functions/functions.js` |
-| 05 | Arrays | `05-arrays/arrays.js` |
-| 06 | Objects | `06-objects/objects.js` |
-| 07 | Loops | `07-loops/loops.js` |
-| 08 | Strings | `08-strings/strings.js` |
-| 09 | Type Conversion | `09-type-conversion/type-conversion.js` |
-| 10 | Scope & Hoisting | `10-scope-and-hoisting/scope-hoisting.js` |
-| 11 | Closures | `11-closures/closures.js` |
-| 12 | Higher Order Functions | `12-higher-order-functions/hof.js` |
-| 13 | DOM Basics | `13-dom-basics/dom.js` |
-| 14 | Events | `14-events/events.js` |
-| 15 | Async / Promises | `15-async-promises/async-promises.js` |
-| 16 | ES6+ Features | `16-es6-features/es6.js` |
-| 17 | Error Handling | `17-error-handling/error-handling.js` |
-| 18 | Modules | `18-modules/modules.js` |
-| 19 | OOP & Classes | `19-oop-classes/oop.js` |
-| 20 | JSON | `20-json/json.js` |
+| #  | Topic                  | File                                      |
+|----|------------------------|-------------------------------------------|
+| 01 | Variables & Datatypes  | `01-variables-and-datatypes/variables.js` |
+| 02 | Operators              | `02-operators/operators.js`               |
+| 03 | Control Flow           | `03-control-flow/control-flow.js`         |
+| 04 | Functions              | `04-functions/functions.js`               |
+| 05 | Arrays                 | `05-arrays/arrays.js`                     |
+| 06 | Objects                | `06-objects/objects.js`                   |
+| 07 | Loops                  | `07-loops/loops.js`                       |
+| 08 | Strings                | `08-strings/strings.js`                   |
+| 09 | Type Conversion        | `09-type-conversion/type-conversion.js`   |
+| 10 | Scope & Hoisting       | `10-scope-and-hoisting/scope-hoisting.js` |
+| 11 | Closures               | `11-closures/closures.js`                 |
+| 12 | Higher Order Functions | `12-higher-order-functions/hof.js`        |
+| 13 | DOM Basics             | `13-dom-basics/dom.js`                    |
+| 14 | Events                 | `14-events/events.js`                     |
+| 15 | Task-Manager           | `15-task-manager`                         |
+| 16 | J Query                | `16-jquery`                               |
+| 17 | Ajax                   | `17-ajax`                                 |
+| 18 | Angular.js             | `20-angular`                              |
 
 ---
 
