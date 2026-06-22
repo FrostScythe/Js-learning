@@ -375,3 +375,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (prefers-reduced-motion:reduce){
     *{ animation:none !important; transition:none !important; }
 }
+
+
+/* ===================== Validation FORM ===================== */
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+    border:2px solid red;
+}
+
+input[disabled="disabled"]{
+    opacity:0.4;
+    cursor:not-allowed !important;
+}

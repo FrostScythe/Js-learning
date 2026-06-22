@@ -2,7 +2,7 @@ var myNinjaApp = angular.module('myApp', ['ngRoute']);
 
 myNinjaApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     // Angular 1.6+ defaults to '#!/'; keep clean '#/' links working
-    $locationProvider.hashPrefix('');
+    $locationProvider.html5Mode(true).hashPrefix('');
     $routeProvider
         .when('/', {
             templateUrl: 'views/home.html'
@@ -15,8 +15,16 @@ myNinjaApp.config(['$routeProvider', '$locationProvider', function ($routeProvid
             templateUrl: 'views/about.html'
         })
         .when('/contact', {
-            templateUrl: 'views/contact.html'
+            templateUrl: 'views/contact.html',
+            controller: 'ContactController'
         })
+        .when('/contact-success', {
+            templateUrl: 'views/contact-success.html',
+            controller: 'ContactController'
+        })
+        // .when('/contact',{
+        //     templateUrl: 'views/contactForm.html'
+        // })
         .otherwise({
             redirectTo: '/'
         });
@@ -64,4 +72,14 @@ myNinjaApp.controller("NinjaController", ['$scope', '$http',function ($scope, $h
     }, function (error) {
         console.error('Error fetching meals:', error);
     });
+}]);
+
+
+
+myNinjaApp.controller('ContactController', ['$scope', '$location', function ($scope, $location) {
+    // $scope.contact = {};
+    $scope.sendMessage = function () {
+        // Implementation for sending message
+        $location.path('/contact-success');
+    };
 }]);
